@@ -70,7 +70,7 @@ public class PlayerShoot : NetworkBehaviour {
 	[Command]
 	void CmdPlayerShooting () {
 		RpcCreateShootingEffect();
-    }
+    	}
 
 	/**
 	 * RemoteProcedureCalls method that instantiates a laser.
@@ -90,7 +90,7 @@ public class PlayerShoot : NetworkBehaviour {
 	[Command]
 	void CmdLaserHitSomething (Vector3 pos, Vector3 normal) {
 		RpcCreateHitEffect(pos, normal);
-    }
+   	}
 
 	/**
 	 * RemoteProcedureCalls method that creats a hit effect.
