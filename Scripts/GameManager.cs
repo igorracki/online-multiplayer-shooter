@@ -34,25 +34,25 @@ public class GameManager : MonoBehaviour {
 	/**
 	 * Method to register a new player in the game (add to dictionary).
 	 */ 
-    public static void RegisterPlayer (string netID, Player player) {
-        string playerID = PLAYER_ID_PREFIX + netID;
-        players.Add(playerID, player);
+	public static void RegisterPlayer (string netID, Player player) {
+		string playerID = PLAYER_ID_PREFIX + netID;
+		players.Add(playerID, player);
 		player.transform.name = playerID;
-    }
+	}
 
 	/**
 	 * Method to remove a player from the game (remove from dictionary).
 	 */ 
-    public static void UnregisterPlayer (string playerID) {
-        players.Remove(playerID);
-    }
+	public static void UnregisterPlayer (string playerID) {
+		players.Remove(playerID);
+	}
 
 	/**
 	 * Method to find and return a player that is in the game (dictionary).
 	 */ 
-    public static Player GetPlayer (string playerID) {
-        return players[playerID];
-    }
+	public static Player GetPlayer (string playerID) {
+		return players[playerID];
+	}
 
 	/**
 	 * Method to return all players that are currently in the game.
